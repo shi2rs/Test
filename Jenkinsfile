@@ -4,6 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Step 1'
+        return true
       }
     }
   }
