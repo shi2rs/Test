@@ -4,8 +4,13 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Step 1'
-        return true
       }
+      stage('Example') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
     }
+    
   }
 }
